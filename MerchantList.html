@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="merchantlist.css">
+  <title>Merchant List</title>
+</head>
+<body>
+  <div class="merchant-container">
+    <h1>Merchant List</h1>
+    
+    <!-- Action Buttons -->
+    <div class="actions">
+      <button id="addMerchantBtn">Add New Merchant</button>
+      <label for="csvUpload" class="upload-btn">Upload CSV</label>
+      <input type="file" id="csvUpload" accept=".csv" style="display: none;">
+    </div>
+
+        <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search merchants...">
+    </div>
+
+    <!-- Merchant List Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Merchant Name</th>
+          <th>Merchant ID</th>
+          <th>Contact Numbers</th>
+          <th>Contact Person</th>
+          <th>Address</th>
+          <th>Assigned KAM</th>
+        </tr>
+      </thead>
+      <tbody id="merchantList">
+        <!-- Dynamic rows will be added here -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Add Merchant Modal -->
+  <div id="addMerchantModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Add New Merchant</h2>
+      <form id="addMerchantForm">
+        <label for="merchantName">Merchant Name:</label>
+        <input type="text" id="merchantName" required>
+        <label for="merchantID">Merchant ID:</label>
+        <input type="text" id="merchantID" required>
+        <label for="contactNumber">Contact Numbers:</label>
+        <input type="text" id="contactNumber" required>
+        <label for="contactPerson">Contact Person:</label>
+        <input type="text" id="contactPerson" required>
+        <label for="address">Address:</label>
+        <textarea id="address" required></textarea>
+        <label for="assignedKAM">Assigned KAM:</label>
+        <input type="text" id="assignedKAM" required>
+        <button type="submit">Add Merchant</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="merchantlist.js"></script>
+</body>
+</html>

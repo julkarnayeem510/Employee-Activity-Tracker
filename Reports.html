@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reports.css">
+  <title>Reports</title>
+</head>
+<body>
+  <div class="reports-container">
+    <h1>Reports Menu</h1>
+
+    <!-- Reports Block -->
+    <div class="reports-block">
+      <button id="reportsBtn">Reports</button>
+    </div>
+
+    <!-- Merchant Report Modal -->
+    <div id="merchantReportModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Export Merchant Reports</h2>
+        <form id="merchantReportForm">
+          <label for="merchantId">Merchant ID:</label>
+          <input type="text" id="merchantId" required>
+
+          <label for="problemStatus">Problem Status:</label>
+          <select id="problemStatus" required>
+            <option value="Pending">Pending</option>
+            <option value="Delivered">Delivered</option>
+            <option value="Partially Delivered">Partially Delivered</option>
+            <option value="Cancelled/Returned">Cancelled/Returned</option>
+            <option value="Missing/Damaged">Missing/Damaged</option>
+            <option value="Zone Change">Zone Change</option>
+            <option value="No/Wrong Entry">No/Wrong Entry</option>
+            <option value="Rate Change">Rate Change</option>
+            <option value="Other Issue">Other Issue</option>
+          </select>
+
+          <label for="parcelStatus">Parcel Status:</label>
+          <select id="parcelStatus" required>
+            <option value="Done">Done</option>
+            <option value="Processing">Processing</option>
+            <option value="Need Follow-Up">Need Follow-Up</option>
+          </select>
+
+          <label for="fromDate">From:</label>
+          <input type="date" id="fromDate" required>
+
+          <label for="toDate">To:</label>
+          <input type="date" id="toDate" required>
+
+          <button type="submit">Download Report</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Work Report Modal -->
+    <div id="workReportModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Export Work Reports</h2>
+        <form id="workReportForm">
+          <label for="reportType">Report Type:</label>
+          <input type="text" id="reportType" required>
+
+          <label for="problemStatusWork">Problem Status:</label>
+          <select id="problemStatusWork" required>
+            <option value="Pending">Pending</option>
+            <option value="Delivered">Delivered</option>
+            <option value="Partially Delivered">Partially Delivered</option>
+            <option value="Cancelled/Returned">Cancelled/Returned</option>
+            <option value="Missing/Damaged">Missing/Damaged</option>
+            <option value="Zone Change">Zone Change</option>
+            <option value="No/Wrong Entry">No/Wrong Entry</option>
+            <option value="Rate Change">Rate Change</option>
+            <option value="Other Issue">Other Issue</option>
+          </select>
+
+          <label for="parcelStatusWork">Parcel Status:</label>
+          <select id="parcelStatusWork" required>
+            <option value="Done">Done</option>
+            <option value="Processing">Processing</option>
+            <option value="Need Follow-Up">Need Follow-Up</option>
+          </select>
+
+          <label for="fromDateWork">From:</label>
+          <input type="date" id="fromDateWork" required>
+
+          <label for="toDateWork">To:</label>
+          <input type="date" id="toDateWork" required>
+
+          <button type="submit">Download Report</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="reports.js"></script>
+</body>
+</html>
